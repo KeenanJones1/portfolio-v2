@@ -3,6 +3,7 @@ import Image from 'gatsby-image'
 import {Link, graphql, useStaticQuery} from 'gatsby'
 import SocialLinks from '../constants/soicalLinks'
 
+
 const query = graphql`
 {
   file(relativePath: {eq: "hero-img.jpg"}) {
@@ -17,27 +18,32 @@ const query = graphql`
 
 
  const Hero = () => {
-  const {file:{ childImageSharp:{ fluid }}} = useStaticQuery(query)
+  const {file:{ childImageSharp:{ fluid }}} = useStaticQuery(query);
+
  return (
    <header className="hero">
     <div className="section-center hero-center">
     <article className="hero-info">
      <div>
       <div className="underline">
-       <h1>I'm Keenan</h1>
-       <h4>Freelance Web developer</h4>
-       <Link to='/contact'></Link>
+       <h3>my name is</h3>
+       <h1>Keenan</h1>
+       <h4>I build things for the Web</h4>
+       <a href='mailto:keenanjones210@gmail.com' className="btn">Contact me</a>
+       <SocialLinks />
       </div>
      </div>
     </article>
 
-    <div className="hero-container">
-     <Image fluid={fluid} className="hero-img" />
-    </div>
+     <div className="wrapper">
+      <Image fluid={fluid} className="hero-img" />
+     </div>
     </div>
    </header>
  )
 }
+
+
 
 
 export default Hero;

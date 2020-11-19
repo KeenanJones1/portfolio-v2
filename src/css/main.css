@@ -403,6 +403,10 @@ Hero
  position: relative;
 }
 
+.wrapper{
+  width: 22vw;
+}
+
 
 .hero-center {
  height: 100%;
@@ -413,9 +417,12 @@ Hero
 .hero .underline {
  margin-bottom: 0.5rem;
  margin-left: 0;
+ width: 15rem;
 }
 .hero-info {
  background: var(--clr-primary-10);
+ position: relative;
+ top: -20%;
 }
 .hero-img {
  display: none;
