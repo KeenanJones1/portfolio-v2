@@ -1,20 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Keenan Portfolio`,
+    description: `This is the latest version of Keenan's Portfolio Site`,
+    author: `@keenan_jones`,
+    twitterUsername: '',
+    image: '',
+    siteUrl: 'https://testing-strapi-gatsby-build.netlify.app'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +27,20 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/logo.svg`, // This path is relative to the root of the site.
+      },
+    },
+
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        //   contentTypes : `jobs`, `projects`, `blogs`,
+        //   singleType : `about`
+        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+        contentTypes: [],
+        singleTypes: [],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

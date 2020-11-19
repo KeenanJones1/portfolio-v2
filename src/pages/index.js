@@ -12,7 +12,9 @@ import Projects from '../components/Projects'
 import SEO from "../components/seo"
 
 export default () => (
-  <Layout>Index Page</Layout>
+  <Layout>
+    <Hero />
+  </Layout>
 )
 
 // ...GatsbyImageSharpFluid

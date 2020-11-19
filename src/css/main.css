@@ -7,6 +7,7 @@
  --clr-primary-3: hsl(185, 81%, 29%);
  --clr-primary-4: hsl(184, 77%, 34%);
  --clr-primary-5: #2caeba;
+ 
  /* lighter shades of primary color */
  --clr-primary-6: hsl(185, 57%, 50%);
  --clr-primary-7: hsl(184, 65%, 59%);
@@ -401,6 +402,7 @@ Hero
  background: var(--clr-primary-10);
  position: relative;
 }
+
 
 .hero-center {
  height: 100%;
