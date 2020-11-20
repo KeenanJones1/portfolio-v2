@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function Title() {
+const Title = ({title}) => {
  return (
-  <div>
-   <h1>Title</h1>
+  <div className="section-title">
+   <h2>{title || "default title"}</h2>
+   <div className="underline"></div>
   </div>
  )
 }
+
+export default Title
+
