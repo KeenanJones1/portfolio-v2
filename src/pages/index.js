@@ -13,6 +13,9 @@ import SEO from "../components/seo"
 export default () => (
   <Layout>
     <Hero />
+    <Jobs />
+    <Projects />
+    <Blogs />
   </Layout>
 )
 
