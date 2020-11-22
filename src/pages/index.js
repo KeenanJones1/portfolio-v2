@@ -10,13 +10,38 @@ import Projects from '../components/Projects'
 
 import SEO from "../components/seo"
 
-export default () => (
+export default ({data}) => {
+  const { allStrapiProjects:{nodes:projects}} = data
+  return(
   <Layout>
     <Hero />
     <Jobs />
-    <Projects />
+    <Projects projects={projects} title="featured projects" showLink/>
     <Blogs />
   </Layout>
-)
+)}
 
-// ...GatsbyImageSharpFluid
+
+export const query = graphql`
+  {
+    allStrapiProjects(filter: {featured: {eq: true}}) {
+      nodes {
+        github
+        id
+        desc
+        title
+        img {
+          childImageSharp {
+            fluid {
+            ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        stack {
+          id
+          title
+        }
+      }
+    }
+  }
+`
