@@ -671,7 +671,7 @@ Projects
  font-size: 1.5rem;
 }
 .project-desc {
- word-spacing: 15px;
+ word-spacing: 3px;
  color: var(--clr-grey-3);
 }
 .project-stack {
@@ -772,7 +772,7 @@ Blog
 .blog-img {
  border-top-left-radius: var(--radius);
  border-top-right-radius: var(--radius);
- height: 15rem;
+ height: 25rem;
 }
 .blog-card {
  padding: 1.5rem 1rem;

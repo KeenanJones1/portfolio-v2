@@ -1,9 +1,25 @@
 import React from 'react'
+import Title from './Title'
+import Blog from './Blog'
+import { Link } from 'gatsby'
 
-export default function Blogs() {
+const Blogs = ({blogs, title, showLink}) => {
  return (
-  <div>
-   <h1>Blogs</h1>
-  </div>
+  <section className="section">
+      <Title title={title} />
+      <div className="section-center blogs-center">
+        {blogs.map(blog => {
+          return <Blog key={blog.id} {...blog} />
+        })}
+      </div>
+      {showLink && (
+        <Link to="/blog" className="btn center-btn">
+          blog
+        </Link>
+      )}
+    </section>
  )
 }
+
+export default Blogs
+

@@ -11,13 +11,17 @@ import Projects from '../components/Projects'
 import SEO from "../components/seo"
 
 export default ({data}) => {
-  const { allStrapiProjects:{nodes:projects}} = data
+  const {
+    allStrapiProjects:{ nodes: projects},
+    allStrapiBlogs: { nodes: blogs }
+} = data
+
   return(
   <Layout>
     <Hero />
     <Jobs />
     <Projects projects={projects} title="featured projects" showLink/>
-    <Blogs />
+    <Blogs blogs={blogs} title="blog" showLink />
   </Layout>
 )}
 
@@ -40,6 +44,24 @@ export const query = graphql`
         stack {
           id
           title
+        }
+      }
+    }
+    allStrapiBlogs(sort: {fields: date, order: DESC}, limit: 3) {
+      nodes {
+        category
+        slug
+        content
+        desc
+        date(formatString: "MMMM Do YYYY")
+        id
+        title
+        image {
+          childImageSharp {
+            fluid {
+            ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
