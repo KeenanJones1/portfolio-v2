@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'gatsby-image'
 import {Link, graphql, useStaticQuery} from 'gatsby'
-import SocialLinks from '../constants/soicalLinks'
+import SocialLinks from '../constants/socialLinks'
 
 
 const query = graphql`

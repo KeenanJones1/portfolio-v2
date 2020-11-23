@@ -7,7 +7,7 @@ const Blog = ({category, slug, desc, date, image, title, id}) => {
  return (
   <Link to={`/blogs/${slug}`} key={id} className="blog">
    <article>
-   <Image fluid={image.childImageSharp.fluid} className="blog-img" />
+   { image && (<Image fluid={image.childImageSharp.fluid} className="blog-img" />)}
    <div className="blog-card">
    <h4>{title}</h4>
    <p>{desc}</p>
@@ -20,7 +20,15 @@ const Blog = ({category, slug, desc, date, image, title, id}) => {
  )
 }
 
-// Blog.PropTypes={}
+Blog.propTypes={
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  category: PropTypes.string,
+  slug: PropTypes.string.isRequired, 
+  image: PropTypes.object.isRequired
+} 
 
 export default Blog
 
