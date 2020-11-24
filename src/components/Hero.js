@@ -29,7 +29,7 @@ const query = graphql`
        <h3>my name is</h3>
        <h1>Keenan</h1>
        <h4>I build things for the Web</h4>
-       <a href='mailto:keenanjones210@gmail.com' className="btn">Contact me</a>
+       <Link to="/contact" className="btn">Contact me</Link>
        <SocialLinks />
       </div>
      </div>

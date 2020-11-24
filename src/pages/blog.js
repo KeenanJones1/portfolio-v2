@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Blogs from '../components/Blogs'
 import {graphql} from 'gatsby'
 
+
 const blog = ({data:{allStrapiBlogs:{nodes:blogs}}}) => {
  return (
   <Layout>
