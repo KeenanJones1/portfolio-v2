@@ -4,7 +4,7 @@ module.exports = {
     description: `This is the latest version of Portfolio Site`,
     author: `@keenan_jones`,
     twitterUsername: '@JeenanKones',
-    image: '/twitter.jpg',
+    image: 'twitter.jpg',
     siteUrl: 'https://keenan-jones.netlify.app'
   },
   plugins: [

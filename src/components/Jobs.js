@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from './Title';
+import Resume from '../assets/Resume.pdf'
 import {FaAngleDoubleRight} from 'react-icons/fa'
 import {graphql, useStaticQuery, Link} from 'gatsby'
 
@@ -66,7 +67,7 @@ const query = graphql`
          }
     </article>
    </div>
-   <Link to="/about" className="btn center-btn">more info</Link>
+   <Link href={Resume} target="_blank" className="btn center-btn">more info</Link>
   </section>
  )
 }

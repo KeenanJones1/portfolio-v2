@@ -27,8 +27,9 @@ const query = graphql`
      <div>
       <div className="underline">
        <h3>my name is</h3>
-       <h1>Keenan</h1>
+       <h2>Keenan Jones</h2>
        <h4>I build things for the Web</h4>
+       <p>I'm a software engineer based in Chicago, IL specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.</p>
        <Link to="/contact" className="btn">Contact me</Link>
        <SocialLinks />
       </div>
