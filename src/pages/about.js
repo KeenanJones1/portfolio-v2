@@ -6,7 +6,7 @@ import Image from 'gatsby-image'
 import SEO from '../components/SEO'
 
 const about = ({data:{about:{nodes}}}) => {
-console.log(nodes[0]);
+
 
 const {title, img, info, stack} = nodes[0];
 
